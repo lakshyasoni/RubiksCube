@@ -55,8 +55,26 @@ build CMakeFiles/RubiksCube.dir/main.cpp.obj: CXX_COMPILER__RubiksCube_Debug C$:
   OBJECT_DIR = CMakeFiles\RubiksCube.dir
   OBJECT_FILE_DIR = CMakeFiles\RubiksCube.dir
 
-build CMakeFiles/RubiksCube.dir/GenericRubiksCube.cpp.obj: CXX_COMPILER__RubiksCube_Debug C$:/Users/Asus/CLionProjects/RubiksCube/GenericRubiksCube.cpp || cmake_object_order_depends_target_RubiksCube
-  DEP_FILE = CMakeFiles\RubiksCube.dir\GenericRubiksCube.cpp.obj.d
+build CMakeFiles/RubiksCube.dir/RubiksCube.cpp.obj: CXX_COMPILER__RubiksCube_Debug C$:/Users/Asus/CLionProjects/RubiksCube/RubiksCube.cpp || cmake_object_order_depends_target_RubiksCube
+  DEP_FILE = CMakeFiles\RubiksCube.dir\RubiksCube.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\RubiksCube.dir
+  OBJECT_FILE_DIR = CMakeFiles\RubiksCube.dir
+
+build CMakeFiles/RubiksCube.dir/RubiksCube3dArray.cpp.obj: CXX_COMPILER__RubiksCube_Debug C$:/Users/Asus/CLionProjects/RubiksCube/RubiksCube3dArray.cpp || cmake_object_order_depends_target_RubiksCube
+  DEP_FILE = CMakeFiles\RubiksCube.dir\RubiksCube3dArray.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\RubiksCube.dir
+  OBJECT_FILE_DIR = CMakeFiles\RubiksCube.dir
+
+build CMakeFiles/RubiksCube.dir/RubiksCube1dArray.cpp.obj: CXX_COMPILER__RubiksCube_Debug C$:/Users/Asus/CLionProjects/RubiksCube/RubiksCube1dArray.cpp || cmake_object_order_depends_target_RubiksCube
+  DEP_FILE = CMakeFiles\RubiksCube.dir\RubiksCube1dArray.cpp.obj.d
+  FLAGS = -g -std=gnu++14
+  OBJECT_DIR = CMakeFiles\RubiksCube.dir
+  OBJECT_FILE_DIR = CMakeFiles\RubiksCube.dir
+
+build CMakeFiles/RubiksCube.dir/RubiksCubeBitboard.cpp.obj: CXX_COMPILER__RubiksCube_Debug C$:/Users/Asus/CLionProjects/RubiksCube/RubiksCubeBitboard.cpp || cmake_object_order_depends_target_RubiksCube
+  DEP_FILE = CMakeFiles\RubiksCube.dir\RubiksCubeBitboard.cpp.obj.d
   FLAGS = -g -std=gnu++14
   OBJECT_DIR = CMakeFiles\RubiksCube.dir
   OBJECT_FILE_DIR = CMakeFiles\RubiksCube.dir
@@ -69,7 +87,7 @@ build CMakeFiles/RubiksCube.dir/GenericRubiksCube.cpp.obj: CXX_COMPILER__RubiksC
 #############################################
 # Link the executable RubiksCube.exe
 
-build RubiksCube.exe: CXX_EXECUTABLE_LINKER__RubiksCube_Debug CMakeFiles/RubiksCube.dir/main.cpp.obj CMakeFiles/RubiksCube.dir/GenericRubiksCube.cpp.obj
+build RubiksCube.exe: CXX_EXECUTABLE_LINKER__RubiksCube_Debug CMakeFiles/RubiksCube.dir/main.cpp.obj CMakeFiles/RubiksCube.dir/RubiksCube.cpp.obj CMakeFiles/RubiksCube.dir/RubiksCube3dArray.cpp.obj CMakeFiles/RubiksCube.dir/RubiksCube1dArray.cpp.obj CMakeFiles/RubiksCube.dir/RubiksCubeBitboard.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\RubiksCube.dir

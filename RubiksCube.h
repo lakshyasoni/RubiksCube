@@ -2,14 +2,14 @@
 // Created by Asus on 02-09-2022.
 //
 
-#ifndef RUBIKSCUBE_GENERICRUBIKSCUBE_H
-#define RUBIKSCUBE_GENERICRUBIKSCUBE_H
+#ifndef RUBIKSCUBE_RUBIKSCUBE_H
+#define RUBIKSCUBE_RUBIKSCUBE_H
 
 #include "bits/stdc++.h"
 
 using namespace std;
 
-class GenericRubiksCube {
+class RubiksCube {
 public:
     enum class FACE {
         UP,
@@ -115,12 +115,12 @@ public:
     /*
      * Perform moves on the Rubik Cube
      */
-    GenericRubiksCube &move(MOVE ind);
+    RubiksCube &move(MOVE ind);
 
     /*
      * Invert a move
      */
-    GenericRubiksCube &invert(MOVE ind);
+    RubiksCube &invert(MOVE ind);
 
     /*
      * Rotational Moves on the Rubik Cubes
@@ -133,41 +133,41 @@ public:
      * B, B’, B2
      */
 
-    virtual GenericRubiksCube &f() = 0;
+    virtual RubiksCube &f() = 0;
 
-    virtual GenericRubiksCube &fPrime() = 0;
+    virtual RubiksCube &fPrime() = 0;
 
-    virtual GenericRubiksCube &f2() = 0;
+    virtual RubiksCube &f2() = 0;
 
-    virtual GenericRubiksCube &u() = 0;
+    virtual RubiksCube &u() = 0;
 
-    virtual GenericRubiksCube &uPrime() = 0;
+    virtual RubiksCube &uPrime() = 0;
 
-    virtual GenericRubiksCube &u2() = 0;
+    virtual RubiksCube &u2() = 0;
 
-    virtual GenericRubiksCube &l() = 0;
+    virtual RubiksCube &l() = 0;
 
-    virtual GenericRubiksCube &lPrime() = 0;
+    virtual RubiksCube &lPrime() = 0;
 
-    virtual GenericRubiksCube &l2() = 0;
+    virtual RubiksCube &l2() = 0;
 
-    virtual GenericRubiksCube &r() = 0;
+    virtual RubiksCube &r() = 0;
 
-    virtual GenericRubiksCube &d() = 0;
+    virtual RubiksCube &d() = 0;
 
-    virtual GenericRubiksCube &dPrime() = 0;
+    virtual RubiksCube &dPrime() = 0;
 
-    virtual GenericRubiksCube &d2() = 0;
+    virtual RubiksCube &d2() = 0;
 
-    virtual GenericRubiksCube &rPrime() = 0;
+    virtual RubiksCube &rPrime() = 0;
 
-    virtual GenericRubiksCube &r2() = 0;
+    virtual RubiksCube &r2() = 0;
 
-    virtual GenericRubiksCube &b() = 0;
+    virtual RubiksCube &b() = 0;
 
-    virtual GenericRubiksCube &bPrime() = 0;
+    virtual RubiksCube &bPrime() = 0;
 
-    virtual GenericRubiksCube &b2() = 0;
+    virtual RubiksCube &b2() = 0;
 
     string getCornerColorString(uint8_t ind) const;
 
@@ -177,4 +177,4 @@ public:
 };
 
 
-#endif //RUBIKSCUBE_GENERICRUBIKSCUBE_H
+#endif //RUBIKSCUBE_RUBIKSCUBE_H

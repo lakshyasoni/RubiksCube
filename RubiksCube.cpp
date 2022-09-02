@@ -2,9 +2,9 @@
 // Created by Asus on 02-09-2022.
 //
 
-#include "GenericRubiksCube.h"
+#include "RubiksCube.h"
 
-char GenericRubiksCube::getColorLetter(COLOR color) {
+char RubiksCube::getColorLetter(COLOR color) {
     switch (color) {
         case COLOR::BLUE:
             return 'B';
@@ -24,7 +24,7 @@ char GenericRubiksCube::getColorLetter(COLOR color) {
 /*
  * Describe a move using an index
  */
-string GenericRubiksCube::getMove(MOVE ind) {
+string RubiksCube::getMove(MOVE ind) {
     switch (ind) {
         case MOVE::L:
             return "L";
@@ -68,7 +68,7 @@ string GenericRubiksCube::getMove(MOVE ind) {
 /*
  * Perform a move operation on using a Move index.
  */
-GenericRubiksCube &GenericRubiksCube::move(MOVE ind) {
+RubiksCube &RubiksCube::move(MOVE ind) {
     switch (ind) {
         case MOVE::L:
             return this->l();
@@ -112,7 +112,7 @@ GenericRubiksCube &GenericRubiksCube::move(MOVE ind) {
 /*
  * Invert a move.
  */
-GenericRubiksCube &GenericRubiksCube::invert(MOVE ind) {
+RubiksCube &RubiksCube::invert(MOVE ind) {
     switch (ind) {
         case MOVE::L:
             return this->lPrime();
@@ -153,7 +153,7 @@ GenericRubiksCube &GenericRubiksCube::invert(MOVE ind) {
     }
 }
 
-void GenericRubiksCube::print() const {
+void RubiksCube::print() const {
     cout << "Rubik's Cube:\n\n";
 
     for (int row = 0; row <= 2; row++) {
@@ -201,7 +201,7 @@ void GenericRubiksCube::print() const {
     cout << "\n";
 }
 
-vector<GenericRubiksCube::MOVE> GenericRubiksCube::randomShuffleCube(unsigned int times) {
+vector<RubiksCube::MOVE> RubiksCube::randomShuffleCube(unsigned int times) {
     vector<MOVE> moves_performed;
     srand(time(0));
     for (unsigned int i = 0; i < times; i++) {
@@ -213,7 +213,7 @@ vector<GenericRubiksCube::MOVE> GenericRubiksCube::randomShuffleCube(unsigned in
 }
 
 //Helper function returns string of corner
-string GenericRubiksCube::getCornerColorString(uint8_t ind) const {
+string RubiksCube::getCornerColorString(uint8_t ind) const {
     string str = "";
 
     switch (ind) {
@@ -276,7 +276,7 @@ string GenericRubiksCube::getCornerColorString(uint8_t ind) const {
     return str;
 }
 
-uint8_t GenericRubiksCube::getCornerIndex(uint8_t ind) const {
+uint8_t RubiksCube::getCornerIndex(uint8_t ind) const {
     string corner = getCornerColorString(ind);
 
     uint8_t ret = 0;
@@ -303,7 +303,7 @@ uint8_t GenericRubiksCube::getCornerIndex(uint8_t ind) const {
     return ret;
 }
 
-uint8_t GenericRubiksCube::getCornerOrientation(uint8_t ind) const {
+uint8_t RubiksCube::getCornerOrientation(uint8_t ind) const {
     string corner = getCornerColorString(ind);
 
     string actual_str = "";
